@@ -9,7 +9,7 @@ import Image from "next/image";
 import { useState } from "react";
 
 export default function Home() {
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
     <div className={darkMode ? "dark" : ""}>
@@ -20,51 +20,54 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900 dark:text-white ">
+      <main className="bg-white px-10 md:px-20 lg:px-40 dark:bg-gray-900 dark:text-white font-mono">
         <section className="min-h-screen">
-          <nav className="py-10 mb-12 flex justify-between">
-            <h1 className="text-xl">alinaincodeland</h1>
+          <nav className="py-10 mb-12 flex justify-between ">
+            <h1 className="text-xl">alina.in.codeland</h1>
             <ul className="flex items-center">
               <li>
                 <BsFillMoonStarsFill
                   onClick={() => setDarkMode(!darkMode)}
-                  className="cursor-pointer text-2xl"
+                  className="cursor-pointer text-2xl "
                 />
               </li>
               <li>
-                <a
+                <a class="px-5 py-2 ml-8 font-lg text-teal-900 cursor-pointer border border-b-4 border-r-4 border-teal-600 rounded shadow-lg hover:shadow-sm hover:border-b-2 hover:border-r-2 dark:bg-white">
+                  Resume
+                </a>
+                {/* <a
                   className="bg-gradient-to-r from-cyan-500 to-teal-500 text-white px-4 py-2 rounded ml-8"
                   href="#"
                 >
                   Resume
-                </a>
+                </a> */}
               </li>
             </ul>
           </nav>
 
-          <div className="text-center py-5">
-            <h2 className="text-5xl py-2 text-teal-600 font-medium md:text-6xl">
-              Alina Cuznetov
+          <div className="text-left py-5">
+            <h2 className="text-5xl py-2 font-medium md:text-6xl ">
+              Hello world, I am
+              <br /> <span className="text-teal-600 ">Alina Cuznetov</span>
             </h2>
             <h3 className="text-2xl py-2 md:text-3xl">Frontend developer</h3>
-            <p className="text-m py-5 leading-8 text-gray-800 md:text-xl max-w-xl mx-auto">
-              {" "}
+            <p className="text-left py-5 leading-8 text-gray-800 md:text-xl max-w-xl ">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.
               Similique error qui blanditiis autem, non aliquid nemo recusandae
               dignissimos.
             </p>
           </div>
 
-          <div className="text-5xl flex justify-center gap-16 py-3 text-gray-600">
+          <div className="text-5xl flex justify-start gap-16 py-3 text-gray-600">
             <a href="https://www.linkedin.com/in/alina-cuznetov-733071138">
               <AiFillLinkedin />
             </a>
-            <a href="">
+            <a href="https://github.com/alinaincodeland">
               <AiFillGithub />
             </a>
           </div>
 
-          <div className="relative my-8">
+          <div className="relative my-5">
             <Image
               src={image}
               alt="alinaincodeland"
@@ -75,7 +78,7 @@ export default function Home() {
 
         <section>
           <div>
-            <h3 className="text-3xl py-1"> Services I offer </h3>
+            <h3 className="text-3xl py-1"> My skills </h3>
             <p className="text-md py-2 leading-8 text-gray-800">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               <span className="text-teal-500"> lorem </span>
@@ -99,9 +102,7 @@ export default function Home() {
                 alt="project1"
                 className="m-auto"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
+              <h3 className="text-lg font-medium pt-8 pb-2">Frontend</h3>
               <p className="py-2">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
                 quos consectetur quia quidem odit quis placeat laudantium odio
@@ -122,9 +123,7 @@ export default function Home() {
                 alt="project1"
                 className="m-auto"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
+              <h3 className="text-lg font-medium pt-8 pb-2">Backend</h3>
               <p className="py-2">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
                 quos consectetur quia quidem odit quis placeat laudantium odio
@@ -144,9 +143,7 @@ export default function Home() {
                 alt="project1"
                 className="m-auto"
               />
-              <h3 className="text-lg font-medium pt-8 pb-2">
-                Beautiful Designs
-              </h3>
+              <h3 className="text-lg font-medium pt-8 pb-2">Others</h3>
               <p className="py-2">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit. Vel
                 quos consectetur quia quidem odit quis placeat laudantium odio
@@ -178,42 +175,42 @@ export default function Home() {
             </p>
           </div>
           <div className="flex flex-col gap-10 py-10 lg:flex-row lg:flex-wrap">
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={image1}
                 className="rounded-lg object-cover w-full h-full"
                 layout="response"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={image2}
                 className="rounded-lg object-cover w-full h-full"
                 layout="response"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={image3}
                 className="rounded-lg object-cover w-full h-full"
                 layout="response"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={image1}
                 className="rounded-lg object-cover w-full h-full"
                 layout="response"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={image2}
                 className="rounded-lg object-cover w-full h-full"
                 layout="response"
               />
             </div>
-            <div className="basis-1/3 flex-1">
+            <div className="basis-1/4 flex-1">
               <Image
                 src={image3}
                 className="rounded-lg object-cover w-full h-full"
