@@ -7,6 +7,7 @@ import image2 from "../public/image2.jpg";
 import image3 from "../public/image3.jpg";
 import Image from "next/image";
 import { useState } from "react";
+import ContactForm from "../components/ContactForm";
 
 export default function Home() {
   const [darkMode, setDarkMode] = useState(false);
@@ -218,6 +219,9 @@ export default function Home() {
               />
             </div>
           </div>
+        </section>
+        <section>
+          <ContactForm />
         </section>
       </main>
     </div>
